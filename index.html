@@ -22,12 +22,12 @@
     button,input,select{font:inherit}
     img{max-width:100%;display:block}
     .container{width:min(1180px,calc(100% - 40px));margin:auto}
-    .topbar{position:fixed;z-index:50;top:0;left:0;right:0;padding:14px 0;transition:.3s}
-    .topbar.scrolled{background:rgba(255,255,255,.94);backdrop-filter:blur(18px);box-shadow:0 8px 30px rgba(0,0,0,.06)}
+    .topbar{position:fixed;z-index:50;top:0;left:0;right:0;padding:10px 0;transition:.3s}
+    .topbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(18px);box-shadow:0 8px 30px rgba(0,0,0,.06)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.04em}
-    .brand-mark{width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#fff,#e9f8fb);display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.12);overflow:hidden}
-    .brand-mark:before{content:"";width:24px;height:30px;border-radius:55% 45% 60% 40%;background:var(--blue);transform:rotate(25deg);box-shadow:-7px 1px 0 var(--orange),5px 7px 0 var(--aqua)}
+    .brand-logo{width:74px;height:46px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none}
+    .brand-logo img{width:74px;height:46px;object-fit:contain;display:block}
     .brand-text{font-size:1.15rem}
     .brand-text span{display:block;font-size:.57rem;letter-spacing:.18em;color:var(--blue);margin-top:-4px}
     .links{display:flex;align-items:center;gap:24px;font-size:.84rem;font-weight:700}
@@ -38,7 +38,7 @@
     .menu-btn{display:none;border:0;background:none;font-size:1.6rem;color:var(--navy)}
     .hero{min-height:92vh;position:relative;display:flex;align-items:center;overflow:hidden;background:
       linear-gradient(90deg,rgba(3,32,66,.84),rgba(3,54,103,.38) 55%,rgba(3,54,103,.08)),
-      url('https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=2200&q=88') center/cover}
+      url('https://images.unsplash.com/photo-1541689186060-3b08be2fd22f?auto=format&fit=crop&w=2200&q=88') center/cover}
     .hero:after{content:"";position:absolute;inset:auto -5% -1px;height:150px;background:var(--white);clip-path:ellipse(62% 55% at 50% 100%)}
     .hero-content{position:relative;z-index:2;color:#fff;padding:150px 0 120px;max-width:720px}
     .eyebrow{display:inline-flex;gap:8px;align-items:center;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:800;color:#d9f9ff;margin-bottom:18px}
@@ -77,7 +77,7 @@
     .service:hover{transform:translateY(-5px);box-shadow:0 18px 50px rgba(7,59,120,.11)}
     .service-img{height:220px;overflow:hidden}.service-img img{width:100%;height:100%;object-fit:cover;transition:.5s}.service:hover img{transform:scale(1.04)}
     .service-body{padding:22px}.service-body h3{margin:0 0 8px;font-size:1.2rem}.service-body p{margin:0;color:var(--muted);font-size:.9rem}
-    .pool{min-height:78vh;color:#fff;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,31,62,.75),rgba(3,31,62,.12)),url('https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=2200&q=88') center/cover fixed}
+    .pool{min-height:78vh;color:#fff;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,31,62,.75),rgba(3,31,62,.12)),url('https://images.unsplash.com/photo-1770425033997-7110b9c23c9e?auto=format&fit=crop&w=2200&q=88') center/cover fixed}
     .pool-copy{max-width:680px}.pool h2{font-size:clamp(3rem,6vw,5.5rem)}.pool-badge{display:inline-flex;padding:10px 16px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;font-size:.8rem}
     .personal{background:linear-gradient(120deg,#eefafd,#fff 55%)}
     .personal-card{background:#fff;border:1px solid var(--line);border-radius:32px;padding:38px;box-shadow:var(--shadow)}
@@ -95,7 +95,7 @@
     .outline{border:1px solid var(--blue);background:#fff;color:var(--blue);box-shadow:none}
     .location{background:var(--paper)}.map-card{background:#fff;border-radius:30px;padding:10px;box-shadow:var(--shadow)}.map-card iframe{width:100%;height:390px;border:0;border-radius:22px}
     .location-info{display:flex;flex-direction:column;justify-content:center}.info-row{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}.info-row b{display:block}.info-row span{color:var(--muted);font-size:.9rem}
-    .final{padding:130px 0;color:#fff;text-align:center;background:linear-gradient(90deg,rgba(3,48,93,.88),rgba(0,133,170,.58)),url('https://images.unsplash.com/photo-1559825481-12a05cc00344?auto=format&fit=crop&w=2200&q=88') center/cover}
+    .final{padding:130px 0;color:#fff;text-align:center;background:linear-gradient(90deg,rgba(3,48,93,.88),rgba(0,133,170,.58)),url('https://images.unsplash.com/photo-1541689186060-3b08be2fd22f?auto=format&fit=crop&w=2200&q=88') center/cover}
     .final h2{max-width:800px;margin:12px auto 18px}.final p{max-width:600px;margin:0 auto;color:rgba(255,255,255,.84)}
     footer{background:#052f60;color:#fff;padding:45px 0}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}.footer-grid p,.footer-grid a{color:rgba(255,255,255,.68);font-size:.85rem}.footer-links{display:grid;gap:8px}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:35px;padding-top:20px;color:rgba(255,255,255,.45);font-size:.75rem}
     .float-wa{position:fixed;z-index:45;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#19b75a;color:#fff;display:grid;place-items:center;box-shadow:0 14px 35px rgba(0,0,0,.22);font-size:1.55rem}
@@ -103,6 +103,13 @@
     .modal-box{width:min(560px,100%);background:#fff;border-radius:28px;padding:30px;position:relative;max-height:90vh;overflow:auto}.close{position:absolute;right:18px;top:14px;border:0;background:#eef5f9;border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:1.2rem}
     .form{display:grid;gap:14px;margin-top:22px}.field{display:grid;gap:6px}.field label{font-size:.75rem;font-weight:800;color:var(--navy)}.field input,.field select{width:100%;padding:13px 14px;border:1px solid #d8e3eb;border-radius:14px;outline:none}.field input:focus,.field select:focus{border-color:var(--aqua);box-shadow:0 0 0 3px rgba(39,185,211,.12)}
     .form-note{font-size:.74rem;color:var(--muted)}
+
+    .agenda{background:#eefafd}
+    .agenda-points{display:grid;gap:12px;margin-top:28px}.agenda-points div{padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:18px}.agenda-points b{display:block;color:var(--blue);font-size:.72rem;letter-spacing:.08em;margin-bottom:3px}.agenda-points span{color:var(--muted);font-size:.9rem}
+    .calendar-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow)}.calendar-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}.calendar-head span{display:block;font-size:.68rem;letter-spacing:.16em;color:var(--blue);font-weight:800}.calendar-head strong{font-size:1.15rem}.calendar-dot{color:var(--aqua);font-size:.8rem!important}
+    .calendar-card>label,.time-label{display:block;font-size:.7rem;font-weight:800;letter-spacing:.1em;color:var(--navy);margin-bottom:7px}.calendar-card input{width:100%;padding:14px;border:1px solid #d8e3eb;border-radius:14px;margin-bottom:18px}.time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 20px}.time-grid button{border:1px solid #d8e3eb;background:#fff;border-radius:12px;padding:11px;color:var(--navy);cursor:pointer}.time-grid button.selected{background:var(--blue);border-color:var(--blue);color:#fff}.calendar-card small{display:block;color:var(--muted);font-size:.72rem;margin-top:10px}
+    .legal{background:#f5f9fc;padding:80px 0}.legal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}.legal details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px}.legal summary{font-weight:800;color:var(--navy);cursor:pointer}.legal details p{color:var(--muted);font-size:.86rem;margin:12px 0 0}.legal-note{margin-top:30px;color:var(--muted);font-size:.75rem}
+
     @media(max-width:980px){
       .links{display:none}.menu-btn{display:block}.nav .cta{display:none}
       .split,.review-wrap,.individual{grid-template-columns:1fr}.needs{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}
@@ -116,7 +123,7 @@
       .story-photo{height:360px}.pool{min-height:72vh;background-attachment:scroll}.pool-copy{padding:60px 0}
       .individual-card{min-height:0}.rating{font-size:4.2rem}.map-card iframe{height:300px}
       .float-wa{right:16px;bottom:16px}.topbar{padding:9px 0}
-      .brand-mark{width:38px;height:38px}
+      .brand-logo{width:64px;height:44px}.brand-logo img{width:64px;height:44px}
     }
   </style>
 </head>
@@ -124,10 +131,10 @@
 <header class="topbar" id="topbar">
   <div class="container nav">
     <a class="brand" href="#inicio" aria-label="SHUÍ inicio">
-      <span class="brand-mark"></span><span class="brand-text">SHUÍ<span>HIDROKINESIOTERAPIA</span></span>
+      <span class="brand-logo"><img src="assets/logo-shui.svg" alt="SHUÍ"></span><span class="brand-text">SHUÍ<span>HIDROKINESIOTERAPIA</span></span>
     </a>
     <nav class="links" aria-label="Principal">
-      <a href="#shui">SHUÍ</a><a href="#servicios">Servicios</a><a href="#individual">Individual</a><a href="#resenas">Reseñas</a><a href="#ubicacion">Contacto</a>
+      <a href="#shui">SHUÍ</a><a href="#servicios">Servicios</a><a href="#individual">Individual</a><a href="#agenda">Turnos</a><a href="#resenas">Reseñas</a><a href="#ubicacion">Contacto</a>
     </nav>
     <button class="cta" data-book>RESERVAR TURNO</button>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
@@ -157,7 +164,7 @@
         <div class="benefit"><strong>PROGRESIÓN</strong><span>Un proceso acompañado, paso a paso.</span></div>
       </div>
     </div>
-    <div class="photo story-photo"><img src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=1200&q=88" alt="Pileta climatizada para actividades acuáticas" loading="lazy"></div>
+    <div class="photo story-photo"><img src="https://images.unsplash.com/photo-1541689186060-3b08be2fd22f?auto=format&fit=crop&w=1200&q=88" alt="Pileta climatizada para actividades acuáticas" loading="lazy"></div>
   </div>
 </section>
 
@@ -178,7 +185,7 @@
 
 <section id="hidro">
   <div class="container split">
-    <div class="photo story-photo"><img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1200&q=88" alt="Trabajo terapéutico en agua" loading="lazy"></div>
+    <div class="photo story-photo"><img src="https://images.unsplash.com/photo-1758654860100-32cd2e83e74a?auto=format&fit=crop&w=1200&q=88" alt="Trabajo terapéutico en agua" loading="lazy"></div>
     <div>
       <div class="section-kicker">Servicio principal</div>
       <h2>Hidrokinesioterapia</h2>
@@ -204,15 +211,15 @@
 <section class="services" id="actividades">
   <div class="container">
     <div class="section-kicker">Todas las formas de SHUÍ</div>
-    <h2>Movimiento para diferentes momentos de tu vida.</h2>
-    <p class="intro">Elegí la propuesta que mejor se adapta a vos.</p>
+    <h2>Rehabilitación, movimiento y bienestar.</h2>
+    <p class="intro">Propuestas para recuperar movimiento, ganar confianza y seguir activo, siempre con acompañamiento profesional.</p>
     <div class="service-grid">
-      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=900&q=82" alt="Rehabilitación acuática" loading="lazy"></div><div class="service-body"><h3>Rehabilitación acuática</h3><p>Para acompañar procesos de recuperación, movilidad y confianza en el movimiento.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1600965962361-9035dbfd1c50?auto=format&fit=crop&w=900&q=82" alt="Aquatraining" loading="lazy"></div><div class="service-body"><h3>Aquatraining</h3><p>Entrenamiento en el agua para trabajar fuerza, movilidad y resistencia.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1560089000-7433a4ebbd64?auto=format&fit=crop&w=900&q=82" alt="Fitness acuático" loading="lazy"></div><div class="service-body"><h3>Fitness acuático</h3><p>Actividad física adaptada para mantenerte activo y disfrutar del movimiento.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1539794830467-1f1755804d7b?auto=format&fit=crop&w=900&q=82" alt="Adultos mayores en actividad acuática" loading="lazy"></div><div class="service-body"><h3>Adultos mayores</h3><p>Movimiento adaptado para acompañar movilidad, equilibrio, fuerza y autonomía.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=900&q=82" alt="Terapias acuáticas" loading="lazy"></div><div class="service-body"><h3>Terapias acuáticas</h3><p>Propuestas específicas de bienestar y movimiento dentro del agua.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=900&q=82" alt="Watsu y terapias especiales" loading="lazy"></div><div class="service-body"><h3>Watsu · Terapias especiales</h3><p>Experiencias acuáticas orientadas a relajación, bienestar y contacto corporal.</p></div></article>
+      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1773227059784-c1e36cc8c8c9?auto=format&fit=crop&w=900&q=85" alt="Rehabilitación acuática" loading="lazy"></div><div class="service-body"><h3>Rehabilitación acuática</h3><p>Para acompañar procesos de recuperación, movilidad y confianza en el movimiento.</p></div></article>
+      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1541689186060-3b08be2fd22f?auto=format&fit=crop&w=900&q=85" alt="Ejercicio acuático adaptado" loading="lazy"></div><div class="service-body"><h3>Aquatraining</h3><p>Entrenamiento en el agua para trabajar fuerza, movilidad y resistencia.</p></div></article>
+      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1773026361468-ff7a0994ee48?auto=format&fit=crop&w=900&q=85" alt="Actividad acuática para bienestar y movilidad" loading="lazy"></div><div class="service-body"><h3>Fitness acuático</h3><p>Actividad física adaptada para mantenerte activo y disfrutar del movimiento.</p></div></article>
+      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1541689186060-3b08be2fd22f?auto=format&fit=crop&w=900&q=85" alt="Adultos mayores en actividad acuática" loading="lazy"></div><div class="service-body"><h3>Adultos mayores</h3><p>Movimiento adaptado para acompañar movilidad, equilibrio, fuerza y autonomía.</p></div></article>
+      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1770425033997-7110b9c23c9e?auto=format&fit=crop&w=900&q=85" alt="Terapia y movimiento en el agua" loading="lazy"></div><div class="service-body"><h3>Terapias acuáticas</h3><p>Trabajo acuático adaptado a objetivos de movilidad, recuperación y bienestar.</p></div></article>
+      <article class="service"><div class="service-img"><img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=900&q=82" alt="Watsu y terapias especiales" loading="lazy"></div><div class="service-body"><h3>Watsu · Terapias especiales</h3><p>Experiencias acuáticas suaves orientadas a relajación, bienestar y contacto corporal.</p></div></article>
     </div>
   </div>
 </section>
@@ -234,6 +241,36 @@
         <p><strong>Próximamente:</strong> presentación ampliada de la profesional, especialidades, enfoque y agenda.</p>
         <button class="cta" data-book>CONSULTAR</button>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="agenda" id="agenda">
+  <div class="container split">
+    <div>
+      <div class="section-kicker">Agenda de turnos</div>
+      <h2>Elegí tu día para fisioterapia.</h2>
+      <p class="intro">Seleccioná una fecha y un horario de preferencia. La solicitud se envía por WhatsApp y el equipo de SHUÍ confirma la disponibilidad antes de reservar.</p>
+      <div class="agenda-points">
+        <div><b>01 · Fecha</b><span>Elegí el día que te resulte más cómodo.</span></div>
+        <div><b>02 · Horario</b><span>Indicá tu franja preferida.</span></div>
+        <div><b>03 · Confirmación</b><span>Recibís la respuesta por WhatsApp.</span></div>
+      </div>
+    </div>
+    <div class="calendar-card">
+      <div class="calendar-head"><div><span>TURNOS</span><strong>Fisioterapia individual</strong></div><span class="calendar-dot">●</span></div>
+      <label for="agendaDate">FECHA PREFERIDA</label>
+      <input id="agendaDate" type="date">
+      <div class="time-label">HORARIO PREFERIDO</div>
+      <div class="time-grid">
+        <button type="button" data-time="09:00">09:00</button><button type="button" data-time="10:00">10:00</button>
+        <button type="button" data-time="11:00">11:00</button><button type="button" data-time="12:00">12:00</button>
+        <button type="button" data-time="15:00">15:00</button><button type="button" data-time="16:00">16:00</button>
+        <button type="button" data-time="17:00">17:00</button><button type="button" data-time="18:00">18:00</button>
+      </div>
+      <button class="cta" id="agendaBook" type="button">SOLICITAR ESTE TURNO</button>
+      <small>Los horarios son orientativos y quedan sujetos a disponibilidad y confirmación.</small>
     </div>
   </div>
 </section>
@@ -276,23 +313,38 @@
 </section>
 </main>
 
+
+<section class="legal" id="legales">
+  <div class="container">
+    <div class="section-kicker">Información legal</div>
+    <h2>Transparencia y cuidado.</h2>
+    <div class="legal-grid">
+      <details open><summary>Privacidad y datos personales</summary><p>Los datos que envíes mediante el formulario o WhatsApp se utilizan para responder consultas y gestionar solicitudes de turnos. SHUÍ debe resguardar la confidencialidad y tratar los datos personales de acuerdo con la normativa aplicable.</p></details>
+      <details><summary>Información de salud</summary><p>El contenido de este sitio es informativo y no reemplaza una evaluación profesional. La indicación, adaptación y continuidad de cualquier práctica se define de acuerdo con la evaluación correspondiente.</p></details>
+      <details><summary>Turnos y cancelaciones</summary><p>Completar el calendario o enviar una solicitud no implica una reserva automática. El turno queda confirmado únicamente cuando SHUÍ comunica la disponibilidad. Las condiciones de cancelación y reprogramación se informarán al momento de confirmar.</p></details>
+      <details><summary>Derechos del paciente</summary><p>La atención se brinda respetando la dignidad, intimidad, confidencialidad, información sanitaria y consentimiento informado que correspondan.</p></details>
+    </div>
+    <p class="legal-note">© <span class="legal-year"></span> SHUÍ Hidrokinesioterapia · Todos los derechos reservados.</p>
+  </div>
+</section>
+
 <footer>
   <div class="container footer-grid">
-    <div><div class="brand"><span class="brand-mark"></span><span class="brand-text">SHUÍ<span style="color:#8ee9f4">HIDROKINESIOTERAPIA</span></span></div><p>Hidrokinesioterapia · Rehabilitación · Movimiento · Bienestar</p></div>
+    <div><div class="brand"><span class="brand-logo"><img src="assets/logo-shui.svg" alt="SHUÍ"></span><span class="brand-text">SHUÍ<span style="color:#8ee9f4">HIDROKINESIOTERAPIA</span></span></div><p>Hidrokinesioterapia · Rehabilitación · Movimiento · Bienestar</p></div>
     <div><strong>Explorá</strong><div class="footer-links" style="margin-top:12px"><a href="#servicios">Servicios</a><a href="#individual">Atención individual</a><a href="#resenas">Reseñas</a><a href="#ubicacion">Contacto</a></div></div>
     <div><strong>Contacto</strong><div class="footer-links" style="margin-top:12px"><a href="https://wa.me/5493518694852">WhatsApp</a><a href="https://www.instagram.com/shui.argentina/" target="_blank" rel="noopener">@shui.argentina</a><a href="https://maps.app.goo.gl/ReKKz96Hf3jwEZWQA?g_st=ic" target="_blank" rel="noopener">Google Maps</a></div></div>
   </div>
   <div class="container copyright">© <span id="year"></span> SHUÍ Hidrokinesioterapia. Todos los derechos reservados.</div>
 </footer>
 
-<a class="float-wa" href="https://wa.me/5493518694852?text=Hola%20SHU%C3%8D%2C%20quiero%20consultar%20por%20las%20actividades%20y%20turnos%20disponibles." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">⌕</a>
+<a class="float-wa" href="https://wa.me/5493518694852?text=Hola%20SHU%C3%8D%2C%20quiero%20consultar%20por%20las%20actividades%20y%20turnos%20disponibles." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
 
 <div class="modal" id="bookingModal" aria-hidden="true">
   <div class="modal-box">
     <button class="close" id="closeModal" aria-label="Cerrar">×</button>
     <div class="section-kicker">Reserva</div>
     <h2 style="font-size:2.2rem">Elegí cómo querés atenderte.</h2>
-    <p class="intro">Este primer turnero envía tu solicitud por WhatsApp. Luego podemos conectarlo a una agenda online con disponibilidad real.</p>
+    <p class="intro">Elegí el servicio, el día y el horario de preferencia. La solicitud se envía por WhatsApp y SHUÍ confirma la disponibilidad antes de reservar.</p>
     <form class="form" id="bookingForm">
       <div class="field"><label for="service">SERVICIO</label><select id="service" required><option value="">Seleccionar…</option><option>Hidrokinesioterapia</option><option>Sesión individual en pileta</option><option>Fisioterapia individual</option><option>Aquatraining</option><option>Fitness acuático</option><option>Adultos mayores</option><option>Watsu / terapia acuática</option></select></div>
       <div class="field"><label for="date">DÍA PREFERIDO</label><input id="date" type="date" required></div>
@@ -326,6 +378,24 @@
     nav.style.display=nav.style.display==='flex'?'none':'flex';
     nav.style.position='absolute';nav.style.top='70px';nav.style.left='14px';nav.style.right='14px';nav.style.padding='18px';nav.style.borderRadius='18px';nav.style.background='#fff';nav.style.boxShadow='0 15px 40px rgba(0,0,0,.12)';nav.style.flexDirection='column';nav.style.alignItems='flex-start';
   });
+
+  const agendaDate=document.getElementById('agendaDate');
+  if(agendaDate){
+    const today=new Date(); const iso=today.toISOString().slice(0,10); agendaDate.min=iso; agendaDate.value=iso;
+    let selectedTime='';
+    document.querySelectorAll('.time-grid button').forEach(btn=>btn.addEventListener('click',()=>{
+      document.querySelectorAll('.time-grid button').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected'); selectedTime=btn.dataset.time;
+    }));
+    document.getElementById('agendaBook').addEventListener('click',()=>{
+      const date=agendaDate.value || iso;
+      const time=selectedTime || 'Horario a coordinar';
+      const msg=`Hola SHUÍ, quiero solicitar un turno de fisioterapia individual.%0A%0AFecha preferida: ${date}%0AHorario preferido: ${time}%0AQuisiera consultar disponibilidad.`;
+      window.open('https://wa.me/5493518694852?text='+msg,'_blank');
+    });
+  }
+  document.querySelector('.legal-year').textContent=new Date().getFullYear();
+
 </script>
 </body>
 </html>
