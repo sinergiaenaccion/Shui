@@ -11,6 +11,7 @@ Sitio inicial de SHUÍ Hidrokinesioterapia.
 - Bloque preparado para reseñas de Google.
 - Secciones de hidrokinesioterapia, actividades, atención individual y fisioterapia.
 - Imágenes remotas provisionales para la primera versión.
+- Publicación configurada mediante GitHub Pages + GitHub Actions.
 
 ## Próximos pasos
 1. Reemplazar imágenes provisionales por fotografías reales de SHUÍ.
