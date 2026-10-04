@@ -6,5 +6,6 @@
     <path d="M354 314 C393 353 455 373 530 358 C490 401 421 420 357 405 C322 397 295 381 274 359 C301 366 329 349 354 314Z" fill="#43c3dc"/>
     <path d="M296 111 C264 157 256 216 271 271 C289 335 336 375 402 391 C350 389 301 365 267 324 C211 256 220 166 276 105Z" fill="#fff" opacity=".96"/>
   </g>
-  <text x="505" y="365" font-family="Arial, Helvetica, sans-serif" font-size="185" font-weight="700" letter-spacing="-8" fill="#171717">SHUÍ</text>
+  <text x="505" y="365" font-family="Arial, Helvetica, sans-serif" font-size="185" font-weight="700" letter-spacing="-8" fill="#171717">SHUI</text>
+  <path d="M852 176 L894 176 L920 214 L826 214 Z" fill="#171717"/>
 </svg>
