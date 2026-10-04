@@ -38,7 +38,8 @@
     .menu-btn{display:none;border:0;background:none;font-size:1.6rem;color:var(--navy)}
     .hero{min-height:92vh;position:relative;display:flex;align-items:center;overflow:hidden;background:
       linear-gradient(90deg,rgba(3,32,66,.84),rgba(3,54,103,.38) 55%,rgba(3,54,103,.08)),
-      url('assets/shui-grupo.jpg') center/cover}
+      url('assets/shui-grupo.jpg'),
+      url('https://images.pexels.com/photos/7222169/pexels-photo-7222169.jpeg?auto=compress&cs=tinysrgb&w=1800') center/cover}
     .hero:after{content:"";position:absolute;inset:auto -5% -1px;height:150px;background:var(--white);clip-path:ellipse(62% 55% at 50% 100%)}
     .hero-content{position:relative;z-index:2;color:#fff;padding:150px 0 120px;max-width:720px}
     .eyebrow{display:inline-flex;gap:8px;align-items:center;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:800;color:#d9f9ff;margin-bottom:18px}
@@ -77,7 +78,7 @@
     .service:hover{transform:translateY(-5px);box-shadow:0 18px 50px rgba(7,59,120,.11)}
     .service-img{height:220px;overflow:hidden}.service-img img{width:100%;height:100%;object-fit:cover;transition:.5s}.service:hover img{transform:scale(1.04)}
     .service-body{padding:22px}.service-body h3{margin:0 0 8px;font-size:1.2rem}.service-body p{margin:0;color:var(--muted);font-size:.9rem}
-    .pool{min-height:78vh;color:#fff;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,31,62,.75),rgba(3,31,62,.12)),url('assets/shui-ejercicio.jpg') center/cover fixed}
+    .pool{min-height:78vh;color:#fff;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,31,62,.75),rgba(3,31,62,.12)),url('assets/shui-ejercicio.jpg'),url('https://images.pexels.com/photos/7222562/pexels-photo-7222562.jpeg?auto=compress&cs=tinysrgb&w=1800') center/cover fixed}
     .pool-copy{max-width:680px}.pool h2{font-size:clamp(3rem,6vw,5.5rem)}.pool-badge{display:inline-flex;padding:10px 16px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;font-size:.8rem}
     .personal{background:linear-gradient(120deg,#eefafd,#fff 55%)}
     .personal-card{background:#fff;border:1px solid var(--line);border-radius:32px;padding:38px;box-shadow:var(--shadow)}
@@ -95,7 +96,7 @@
     .outline{border:1px solid var(--blue);background:#fff;color:var(--blue);box-shadow:none}
     .location{background:var(--paper)}.map-card{background:#fff;border-radius:30px;padding:10px;box-shadow:var(--shadow)}.map-card iframe{width:100%;height:390px;border:0;border-radius:22px}
     .location-info{display:flex;flex-direction:column;justify-content:center}.info-row{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}.info-row b{display:block}.info-row span{color:var(--muted);font-size:.9rem}
-    .final{padding:130px 0;color:#fff;text-align:center;background:linear-gradient(90deg,rgba(3,48,93,.88),rgba(0,133,170,.58)),url('assets/shui-grupo.jpg') center/cover}
+    .final{padding:130px 0;color:#fff;text-align:center;background:linear-gradient(90deg,rgba(3,48,93,.88),rgba(0,133,170,.58)),url('assets/shui-grupo.jpg'),url('https://images.unsplash.com/photo-1541689186060-3b08be2fd22f?auto=format&fit=crop&w=2200&q=88') center/cover}
     .final h2{max-width:800px;margin:12px auto 18px}.final p{max-width:600px;margin:0 auto;color:rgba(255,255,255,.84)}
     footer{background:#052f60;color:#fff;padding:45px 0}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}.footer-grid p,.footer-grid a{color:rgba(255,255,255,.68);font-size:.85rem}.footer-links{display:grid;gap:8px}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:35px;padding-top:20px;color:rgba(255,255,255,.45);font-size:.75rem}
     .float-wa{position:fixed;z-index:45;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#19b75a;color:#fff;display:grid;place-items:center;box-shadow:0 14px 35px rgba(0,0,0,.22);font-size:1.55rem}
@@ -356,9 +357,9 @@
     <h2>Así se vive SHUÍ.</h2>
     <p class="intro">Movimiento, acompañamiento y personas reales. La pileta de SHUÍ es parte de la experiencia, no una foto de catálogo.</p>
     <div class="real-grid">
-      <div class="real-photo real-photo-tall"><img src="assets/shui-ejercicio.jpg" alt="Persona realizando ejercicios en la pileta climatizada de SHUÍ" loading="lazy"></div>
-      <div class="real-photo"><img src="assets/shui-grupo.jpg" alt="Personas realizando actividad acuática en SHUÍ" loading="lazy"></div>
-      <div class="real-photo"><img src="assets/shui-adulto-mayor.jpg" alt="Actividad acuática para adultos mayores en SHUÍ" loading="lazy"></div>
+      <div class="real-photo real-photo-tall"><img src="assets/shui-ejercicio.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7222570/pexels-photo-7222570.jpeg?auto=compress&cs=tinysrgb&w=1200'" alt="Persona realizando ejercicios en la pileta climatizada de SHUÍ" loading="lazy"></div>
+      <div class="real-photo"><img src="assets/shui-grupo.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7222179/pexels-photo-7222179.jpeg?auto=compress&cs=tinysrgb&w=1200'" alt="Personas realizando actividad acuática en SHUÍ" loading="lazy"></div>
+      <div class="real-photo"><img src="assets/shui-adulto-mayor.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7222182/pexels-photo-7222182.jpeg?auto=compress&cs=tinysrgb&w=1200'" alt="Actividad acuática para adultos mayores en SHUÍ" loading="lazy"></div>
     </div>
   </div>
 </section>
