@@ -1,487 +1,64 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#083b78">
-  <meta name="description" content="SHUÍ Hidrokinesioterapia en Cerro de las Rosas, Córdoba. Rehabilitación acuática, hidrokinesioterapia, fisioterapia, sesiones individuales, aquatraining y fitness acuático en pileta climatizada.">
-  <title>SHUÍ | Hidrokinesioterapia · Rehabilitación · Movimiento</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --navy:#073b78;--blue:#0878bd;--aqua:#27b9d3;--orange:#f59a20;--ink:#10253f;
-      --muted:#64758a;--paper:#f8fbfd;--white:#fff;--line:rgba(7,59,120,.12);
-      --shadow:0 20px 60px rgba(8,55,100,.12);--radius:28px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Manrope,system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    button,input,select{font:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(1180px,calc(100% - 40px));margin:auto}
-    .topbar{position:fixed;z-index:50;top:0;left:0;right:0;padding:10px 0;transition:.3s}
-    .topbar.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(18px);box-shadow:0 8px 30px rgba(0,0,0,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.04em}
-    .brand-logo{width:68px;height:58px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none}
-    .brand-logo img{width:68px;height:58px;object-fit:contain;display:block}
-    .brand-text{font-size:.57rem;letter-spacing:.18em;color:var(--blue);font-weight:800;line-height:1.25;max-width:150px}
-    footer .brand-text{color:#8ee9f4}
-    .links{display:flex;align-items:center;gap:24px;font-size:.84rem;font-weight:700}
-    .links a{opacity:.8}.links a:hover{opacity:1;color:var(--blue)}
-    .cta{border:0;border-radius:999px;padding:13px 20px;background:var(--orange);color:#fff;font-weight:800;cursor:pointer;box-shadow:0 10px 24px rgba(245,154,32,.25);transition:.2s}
-    .cta:hover{transform:translateY(-2px)}
-    .ghost{border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;box-shadow:none}
-    .menu-btn{display:none;border:0;background:none;font-size:1.6rem;color:var(--navy)}
-    .hero{min-height:92vh;position:relative;display:flex;align-items:center;overflow:hidden;background:
-      linear-gradient(90deg,rgba(3,32,66,.84),rgba(3,54,103,.38) 55%,rgba(3,54,103,.08)),
-      url('assets/shui-grupo.jpg'),
-      url('https://images.pexels.com/photos/7222169/pexels-photo-7222169.jpeg?auto=compress&cs=tinysrgb&w=1800') center/cover}
-    .hero:after{content:"";position:absolute;inset:auto -5% -1px;height:150px;background:var(--white);clip-path:ellipse(62% 55% at 50% 100%)}
-    .hero-content{position:relative;z-index:2;color:#fff;padding:150px 0 120px;max-width:720px}
-    .eyebrow{display:inline-flex;gap:8px;align-items:center;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:800;color:#d9f9ff;margin-bottom:18px}
-    .eyebrow:before{content:"";width:30px;height:2px;background:var(--orange)}
-    h1{font-size:clamp(3.2rem,7vw,6.4rem);line-height:.94;letter-spacing:-.06em;margin:0 0 24px}
-    .hero h1 em{font-style:normal;color:#9cecf7}
-    .lead{font-size:clamp(1rem,2vw,1.22rem);max-width:620px;color:rgba(255,255,255,.9)}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-    .micro{margin-top:22px;font-size:.78rem;color:rgba(255,255,255,.78)}
-    section{padding:105px 0;position:relative;overflow:hidden}
-    .section-kicker{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--blue)}
-    h2{font-size:clamp(2.1rem,4.5vw,4rem);line-height:1.03;letter-spacing:-.05em;margin:12px 0 20px}
-    .intro{max-width:650px;color:var(--muted);font-size:1.05rem}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-    .photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-    .photo img{width:100%;height:100%;object-fit:cover}
-    .story-photo{height:570px}
-    .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
-    .benefit{padding:20px;border:1px solid var(--line);border-radius:20px;background:#fff}
-    .benefit strong{display:block;font-size:.78rem;color:var(--navy);letter-spacing:.08em;margin-bottom:5px}
-    .benefit span{font-size:.86rem;color:var(--muted)}
-    .blue-section{background:var(--navy);color:#fff}
-    .blue-section .intro{color:rgba(255,255,255,.75)}
-    .blue-section .section-kicker{color:#8ee9f4}
-    .needs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
-    .need{min-height:190px;border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));transition:.25s}
-    .need:hover{transform:translateY(-5px);background:rgba(255,255,255,.12)}
-    .need .num{font-size:.72rem;color:#8ee9f4;font-weight:800;margin-bottom:auto}
-    .need h3{font-size:1.15rem;margin:0 0 7px}.need p{margin:0;color:rgba(255,255,255,.7);font-size:.84rem}
-    .wave{position:absolute;left:0;right:0;bottom:-1px;height:90px;pointer-events:none}
-    .wave svg{width:100%;height:100%}
-    .wave path{fill:var(--white)}
-    .services{background:var(--paper)}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
-    .service{background:#fff;border-radius:26px;overflow:hidden;border:1px solid rgba(7,59,120,.08);box-shadow:0 12px 40px rgba(7,59,120,.06);transition:.25s}
-    .service:hover{transform:translateY(-5px);box-shadow:0 18px 50px rgba(7,59,120,.11)}
-    .service-img{height:220px;overflow:hidden}.service-img img{width:100%;height:100%;object-fit:cover;transition:.5s}.service:hover img{transform:scale(1.04)}
-    .service-body{padding:22px}.service-body h3{margin:0 0 8px;font-size:1.2rem}.service-body p{margin:0;color:var(--muted);font-size:.9rem}
-    .pool{min-height:78vh;color:#fff;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,31,62,.75),rgba(3,31,62,.12)),url('assets/shui-ejercicio.jpg'),url('https://images.pexels.com/photos/7222562/pexels-photo-7222562.jpeg?auto=compress&cs=tinysrgb&w=1800') center/cover fixed}
-    .pool-copy{max-width:680px}.pool h2{font-size:clamp(3rem,6vw,5.5rem)}.pool-badge{display:inline-flex;padding:10px 16px;border:1px solid rgba(255,255,255,.35);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;font-size:.8rem}
-    .personal{background:linear-gradient(120deg,#eefafd,#fff 55%)}
-    .personal-card{background:#fff;border:1px solid var(--line);border-radius:32px;padding:38px;box-shadow:var(--shadow)}
-    .personal-card h3{font-size:1.7rem;margin:0 0 12px}.personal-card p{color:var(--muted)}
-    .individual{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:35px}
-    .individual-card{border-radius:28px;padding:30px;background:#fff;border:1px solid var(--line);min-height:270px}
-    .individual-card.accent{background:var(--blue);color:#fff}.individual-card.accent p{color:rgba(255,255,255,.78)}
-    .individual-card h3{font-size:1.5rem;margin-top:0}.individual-card p{color:var(--muted)}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}.step{padding:16px;border-radius:18px;background:rgba(255,255,255,.08)}.step b{display:block;color:#8ee9f4;font-size:.72rem;letter-spacing:.1em}
-    .reviews{background:#fff}
-    .review-wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;align-items:center}
-    .rating{font-size:5rem;line-height:1;font-weight:800;letter-spacing:-.08em;color:var(--navy)}.stars{color:var(--orange);font-size:1.3rem;letter-spacing:2px}.review-count{color:var(--muted);font-size:.9rem;margin-top:5px}
-    .review-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.review{padding:25px;border:1px solid var(--line);border-radius:24px}.review p{margin:0 0 14px;font-size:.93rem}.review small{color:var(--muted)}
-    .review-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-    .outline{border:1px solid var(--blue);background:#fff;color:var(--blue);box-shadow:none}
-    .location{background:var(--paper)}.map-card{background:#fff;border-radius:30px;padding:10px;box-shadow:var(--shadow)}.map-card iframe{width:100%;height:390px;border:0;border-radius:22px}
-    .location-info{display:flex;flex-direction:column;justify-content:center}.info-row{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line)}.info-row b{display:block}.info-row span{color:var(--muted);font-size:.9rem}
-    .final{padding:130px 0;color:#fff;text-align:center;background:linear-gradient(90deg,rgba(3,48,93,.88),rgba(0,133,170,.58)),url('assets/shui-grupo.jpg'),url('https://images.unsplash.com/photo-1541689186060-3b08be2fd22f?auto=format&fit=crop&w=2200&q=88') center/cover}
-    .final h2{max-width:800px;margin:12px auto 18px}.final p{max-width:600px;margin:0 auto;color:rgba(255,255,255,.84)}
-    footer{background:#052f60;color:#fff;padding:45px 0}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}.footer-grid p,.footer-grid a{color:rgba(255,255,255,.68);font-size:.85rem}.footer-links{display:grid;gap:8px}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:35px;padding-top:20px;color:rgba(255,255,255,.45);font-size:.75rem}
-    .float-wa{position:fixed;z-index:45;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#19b75a;color:#fff;display:grid;place-items:center;box-shadow:0 14px 35px rgba(0,0,0,.22);font-size:1.55rem}
-    .modal{position:fixed;inset:0;z-index:100;background:rgba(2,21,43,.7);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}
-    .modal-box{width:min(560px,100%);background:#fff;border-radius:28px;padding:30px;position:relative;max-height:90vh;overflow:auto}.close{position:absolute;right:18px;top:14px;border:0;background:#eef5f9;border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:1.2rem}
-    .form{display:grid;gap:14px;margin-top:22px}.field{display:grid;gap:6px}.field label{font-size:.75rem;font-weight:800;color:var(--navy)}.field input,.field select{width:100%;padding:13px 14px;border:1px solid #d8e3eb;border-radius:14px;outline:none}.field input:focus,.field select:focus{border-color:var(--aqua);box-shadow:0 0 0 3px rgba(39,185,211,.12)}
-    .form-note{font-size:.74rem;color:var(--muted)}
-
-    .agenda{background:#eefafd}
-    .agenda-points{display:grid;gap:12px;margin-top:28px}.agenda-points div{padding:18px 20px;background:#fff;border:1px solid var(--line);border-radius:18px}.agenda-points b{display:block;color:var(--blue);font-size:.72rem;letter-spacing:.08em;margin-bottom:3px}.agenda-points span{color:var(--muted);font-size:.9rem}
-    .calendar-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow)}.calendar-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}.calendar-head span{display:block;font-size:.68rem;letter-spacing:.16em;color:var(--blue);font-weight:800}.calendar-head strong{font-size:1.15rem}.calendar-dot{color:var(--aqua);font-size:.8rem!important}
-    .calendar-card>label,.time-label{display:block;font-size:.7rem;font-weight:800;letter-spacing:.1em;color:var(--navy);margin-bottom:7px}.calendar-card input{width:100%;padding:14px;border:1px solid #d8e3eb;border-radius:14px;margin-bottom:18px}.time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0 20px}.time-grid button{border:1px solid #d8e3eb;background:#fff;border-radius:12px;padding:11px;color:var(--navy);cursor:pointer}.time-grid button.selected{background:var(--blue);border-color:var(--blue);color:#fff}.calendar-card small{display:block;color:var(--muted);font-size:.72rem;margin-top:10px}
-    .assessment{background:#fff}
-    .assessment-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;margin-top:38px;align-items:start}
-    .assessment-card,.assessment-result{background:#f7fbfd;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 14px 45px rgba(7,59,120,.07)}
-    .assessment-progress{display:flex;justify-content:space-between;gap:15px;margin-bottom:22px;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;font-weight:800}
-    .question{display:grid;gap:7px;margin-bottom:18px}.question label{font-size:.84rem;font-weight:800;color:var(--navy)}.question select{width:100%;padding:13px 14px;border:1px solid #d8e3eb;border-radius:14px;background:#fff;color:var(--ink)}
-    .assessment-note{display:block;color:var(--muted);font-size:.7rem;margin-top:12px}
-    .assessment-result{min-height:100%;background:linear-gradient(145deg,#073b78,#0878bd);color:#fff;position:sticky;top:95px}.result-empty{min-height:430px;display:flex;flex-direction:column;justify-content:center}.result-empty span{color:#8ee9f4;font-size:.72rem;letter-spacing:.18em;font-weight:800}.result-empty strong{font-size:2rem;line-height:1.05;margin:12px 0}.result-empty p{color:rgba(255,255,255,.78);margin:0;max-width:430px}
-    .result-kicker{color:#8ee9f4;text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;font-weight:800}.result-title{font-size:2rem;line-height:1.05;margin:10px 0 14px}.result-text{color:rgba(255,255,255,.82);font-size:.92rem}.result-list{display:grid;gap:9px;margin:20px 0}.result-list div{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.09);font-size:.82rem}.result-alert{padding:14px;border-radius:16px;background:rgba(245,154,32,.16);border:1px solid rgba(245,154,32,.45);font-size:.8rem;margin:18px 0}.result-actions{margin-top:22px}
-
-    .legal{background:#f5f9fc;padding:80px 0}.legal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}.legal details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px}.legal summary{font-weight:800;color:var(--navy);cursor:pointer}.legal details p{color:var(--muted);font-size:.86rem;margin:12px 0 0}.legal-note{margin-top:30px;color:var(--muted);font-size:.75rem}
-
-    @media(max-width:980px){
-      .links{display:none}.menu-btn{display:block}.nav .cta{display:none}
-      .split,.review-wrap,.individual{grid-template-columns:1fr}.needs{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}
-      .story-photo{height:440px}.review-list{grid-template-columns:1fr}
-    }
-    @media(max-width:650px){
-      .container{width:min(100% - 28px,1180px)}section{padding:76px 0}
-      .hero{min-height:90vh;background-position:62% center}.hero-content{padding:130px 0 110px}
-      .hero-actions{display:grid;grid-template-columns:1fr}.hero-actions .cta{width:100%}
-      .benefits,.needs,.service-grid,.steps,.footer-grid{grid-template-columns:1fr}.needs .need{min-height:150px}
-      .story-photo{height:360px}.assessment-layout{grid-template-columns:1fr}.assessment-result{position:static}.result-empty{min-height:300px}.pool{min-height:72vh;background-attachment:scroll}.pool-copy{padding:60px 0}
-      .individual-card{min-height:0}.rating{font-size:4.2rem}.map-card iframe{height:300px}
-      .float-wa{right:16px;bottom:16px}.topbar{padding:9px 0}
-      .brand-logo{width:62px;height:54px}.brand-logo img{width:62px;height:54px}
-    }
-  
-    .real-life{background:#f8fbfd}.real-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:16px;margin-top:38px}.real-photo{height:330px;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);background:#dfeef4}.real-photo-tall{height:500px}.real-photo img{width:100%;height:100%;object-fit:cover}.real-photo-tall{grid-row:span 2}.real-photo:nth-child(2){height:242px}.real-photo:nth-child(3){height:242px}@media(max-width:650px){.real-grid{grid-template-columns:1fr}.real-photo,.real-photo-tall,.real-photo:nth-child(2),.real-photo:nth-child(3){height:300px}.real-photo-tall{height:420px}}
-
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#073b78">
+<meta name="description" content="SHUÍ · agua, movimiento, rehabilitación y bienestar en Córdoba.">
+<title>SHUÍ · Agua que acompaña el movimiento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#052f60;--blue:#0878bd;--aqua:#27bfd7;--orange:#f5a01c;--ink:#10253f;--muted:#66798d;--pale:#eefafd;--line:rgba(5,47,96,.12);--shadow:0 24px 70px rgba(5,47,96,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--ink);line-height:1.6;background:#fff}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}.wrap{width:min(1160px,calc(100% - 34px));margin:auto}
+.navbar{position:fixed;z-index:20;top:0;left:0;right:0;padding:12px 0;transition:.3s}.navbar.scrolled{background:rgba(255,255,255,.94);backdrop-filter:blur(18px);box-shadow:0 8px 30px rgba(0,0,0,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between}.logo{width:125px;height:70px;object-fit:contain}.navlinks{display:flex;gap:25px;font-size:.78rem;font-weight:800}.navlinks a{opacity:.78}.navlinks a:hover{color:var(--blue);opacity:1}.menu{display:none;border:0;background:none;font-size:1.5rem;color:var(--deep)}
+.btn{border:0;border-radius:999px;padding:13px 21px;background:var(--orange);color:#fff;font-weight:800;box-shadow:0 12px 28px rgba(245,160,28,.25);transition:.2s}.btn:hover{transform:translateY(-2px)}.btn.alt{background:#fff;color:var(--deep);box-shadow:none}.btn.line{background:transparent;border:1px solid rgba(255,255,255,.45);box-shadow:none}
+.hero{min-height:100svh;position:relative;overflow:hidden;color:#fff;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,30,62,.92),rgba(3,55,104,.55) 54%,rgba(3,55,104,.12)),url('https://images.pexels.com/photos/7222169/pexels-photo-7222169.jpeg?auto=compress&cs=tinysrgb&w=2000') center/cover}
+.hero:after{content:"";position:absolute;bottom:-45px;left:-5%;width:110%;height:115px;background:#fff;border-radius:50% 50% 0 0/70% 70% 0 0}.hero:before{content:"";position:absolute;width:440px;height:440px;border:1px solid rgba(142,233,244,.24);border-radius:50%;right:-150px;bottom:-120px;box-shadow:0 0 0 50px rgba(142,233,244,.05),0 0 0 100px rgba(142,233,244,.03)}
+.hero-inner{position:relative;z-index:2;padding:155px 0 125px;max-width:760px}.eyebrow{display:flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;font-weight:800;color:#bdf4fa}.eyebrow:before{content:"";width:32px;height:2px;background:var(--orange)}
+h1{font-size:clamp(3.4rem,8vw,7.4rem);line-height:.9;letter-spacing:-.065em;margin:20px 0 25px}.hero h1 em{font-style:normal;color:#9cecf7}.hero p{font-size:clamp(1rem,2vw,1.25rem);max-width:650px;color:rgba(255,255,255,.88)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero-note{font-size:.74rem!important;color:rgba(255,255,255,.62)!important;margin-top:20px}
+section{padding:110px 0}.kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;font-weight:800;color:var(--blue)}h2{font-size:clamp(2.3rem,5vw,4.7rem);line-height:1;letter-spacing:-.055em;margin:12px 0 20px}.intro{color:var(--muted);max-width:650px;font-size:1.03rem}
+.manifesto{background:#fff}.manifesto-grid{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:center}.quote{font-size:clamp(1.6rem,3vw,2.7rem);line-height:1.15;letter-spacing:-.04em;margin:35px 0}.quote span{color:var(--blue)}.water-card{height:540px;border-radius:38px;overflow:hidden;position:relative;box-shadow:var(--shadow);background:linear-gradient(145deg,#063d7b,#21bfd7)}.water-card img{width:100%;height:100%;object-fit:cover}.water-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(3,37,76,.5))}
+.float-word{position:absolute;z-index:2;left:28px;bottom:27px;color:#fff;font-size:1.1rem;font-weight:800;letter-spacing:.04em}
+.people{background:var(--deep);color:#fff;position:relative;overflow:hidden}.people .intro{color:rgba(255,255,255,.7)}.people .kicker{color:#8ee9f4}.needs{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:42px}.need{min-height:220px;padding:25px;border:1px solid rgba(255,255,255,.14);border-radius:27px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));display:flex;flex-direction:column;transition:.25s}.need:hover{transform:translateY(-5px);background:rgba(255,255,255,.12)}.need b{font-size:.68rem;color:#8ee9f4}.need h3{margin:auto 0 8px;font-size:1.25rem}.need p{margin:0;color:rgba(255,255,255,.68);font-size:.82rem}
+.services{background:var(--pale)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}.service{background:#fff;border:1px solid var(--line);border-radius:27px;padding:28px;min-height:245px;transition:.25s}.service:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.service .icon{width:46px;height:46px;border-radius:16px;background:#e4f8fc;display:grid;place-items:center;font-size:1.25rem;margin-bottom:25px}.service h3{font-size:1.25rem;margin:0 0 8px}.service p{font-size:.88rem;color:var(--muted);margin:0}
+.space{padding:0;min-height:78vh;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(3,28,59,.88),rgba(3,64,105,.25)),url('https://images.pexels.com/photos/7222570/pexels-photo-7222570.jpeg?auto=compress&cs=tinysrgb&w=2000') center/cover fixed}.space .copy{max-width:650px;padding:120px 0}.space .copy h2{font-size:clamp(3rem,6vw,6rem)}.pill{display:inline-block;padding:9px 14px;border:1px solid rgba(255,255,255,.35);border-radius:99px;font-size:.7rem;font-weight:800;letter-spacing:.1em}
+.real{background:#fff}.real-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:42px}.real-main{height:580px;border-radius:32px;overflow:hidden;box-shadow:var(--shadow)}.real-main img{width:100%;height:100%;object-fit:cover}.real-side{display:grid;grid-template-rows:1fr 1fr;gap:18px}.real-side .mini{border-radius:32px;overflow:hidden;background:#e8f7fa;position:relative}.real-side img{width:100%;height:100%;object-fit:cover}.pending{display:grid;place-items:center;padding:30px;text-align:center;color:var(--muted);background:linear-gradient(145deg,#effafd,#fff)}.pending strong{display:block;color:var(--deep);font-size:1.1rem;margin-bottom:7px}
+.process{background:#f8fbfd}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:42px}.step{padding:25px;border-radius:24px;background:#fff;border:1px solid var(--line)}.step span{color:var(--aqua);font-weight:800;font-size:.7rem}.step h3{font-size:1.05rem;margin:18px 0 7px}.step p{font-size:.82rem;color:var(--muted);margin:0}
+.contact{background:linear-gradient(135deg,#eaf9fc,#fff)}.contact-box{border-radius:38px;padding:55px;background:var(--deep);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:35px;overflow:hidden;position:relative}.contact-box:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(142,233,244,.18);border-radius:50%;right:-170px;bottom:-240px}.contact-box .intro{color:rgba(255,255,255,.72)}.contact-actions{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:2}
+footer{background:#03274f;color:#fff;padding:45px 0}.footer{display:flex;justify-content:space-between;gap:30px;align-items:center}.footer img{width:115px;height:62px;object-fit:contain}.footer p{color:rgba(255,255,255,.6);font-size:.8rem;margin:5px 0}
+.wa{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#19b75a;color:#fff;font-size:1.4rem;box-shadow:0 15px 35px rgba(0,0,0,.22)}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+.ripple{position:absolute;border-radius:50%;border:1px solid rgba(142,233,244,.18);animation:ripple 7s ease-out infinite;pointer-events:none}.r1{width:320px;height:320px;right:10%;top:18%}.r2{width:540px;height:540px;right:-4%;top:2%;animation-delay:2s}@keyframes ripple{0%,100%{transform:scale(.94);opacity:.25}50%{transform:scale(1.05);opacity:.65}}
+@media(max-width:900px){.navlinks,.nav>.btn{display:none}.menu{display:block}.manifesto-grid{grid-template-columns:1fr;gap:40px}.needs{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.contact-box{display:block}.contact-actions{margin-top:25px}.real-grid{grid-template-columns:1fr}.real-main{height:500px}}
+@media(max-width:600px){section{padding:78px 0}.wrap{width:calc(100% - 28px)}.logo{width:110px}.hero-inner{padding:130px 0 110px}.actions{display:grid}.actions .btn{width:100%}.needs,.service-grid,.steps{grid-template-columns:1fr}.need{min-height:170px}.water-card{height:420px}.space{background-attachment:scroll}.space .copy{padding:95px 0}.real-main{height:410px}.real-side{grid-template-rows:260px 200px}.contact-box{padding:34px 27px}.footer{align-items:flex-start;flex-direction:column}}
+</style>
 </head>
 <body>
-<header class="topbar" id="topbar">
-  <div class="container nav">
-    <a class="brand" href="#inicio" aria-label="SHUÍ inicio">
-      <span class="brand-logo"><img src="assets/logo-shui.svg" alt="SHUÍ"></span><span class="brand-text">HIDROKINESIOTERAPIA</span>
-    </a>
-    <nav class="links" aria-label="Principal">
-      <a href="#shui">SHUÍ</a><a href="#servicios">Servicios</a><a href="#individual">Individual</a><a href="#agenda">Turnos</a><a href="#evaluacion">Evaluación</a><a href="#resenas">Reseñas</a><a href="#ubicacion">Contacto</a>
-    </nav>
-    <button class="cta" data-book>RESERVAR TURNO</button>
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
-  </div>
-</header>
+<header class="navbar" id="nav"><div class="wrap nav"><a href="#inicio"><img class="logo" src="assets/logo-shui.svg" alt="SHUÍ"></a><nav class="navlinks"><a href="#agua">El agua</a><a href="#personas">Personas</a><a href="#servicios">Propuesta</a><a href="#espacio">Espacio</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a></nav><a class="btn" href="https://wa.me/5493518694852?text=Hola%20SHU%C3%8D%2C%20quiero%20hacer%20una%20consulta." target="_blank">HABLEMOS</a><button class="menu" id="menu">☰</button></div></header>
 
 <main>
-<section class="hero" id="inicio">
-  <div class="container hero-content">
-    <div class="eyebrow">Cerro de las Rosas · Córdoba</div>
-    <h1>Volvé a <em>moverte.</em></h1>
-    <p class="lead">Rehabilitación, movimiento y bienestar en el agua. Hidrokinesioterapia, fisioterapia y actividades acuáticas en una pileta climatizada durante todo el año.</p>
-    <div class="hero-actions"><button class="cta" data-book>QUIERO RESERVAR</button><a class="cta ghost" href="#servicios">CONOCER SHUÍ ↓</a></div>
-    <div class="micro">💧 Pileta climatizada · 📍 Av. Fernando Fader 3853 · 💬 351 869-4852</div>
-  </div>
-</section>
+<section class="hero" id="inicio"><div class="ripple r1"></div><div class="ripple r2"></div><div class="wrap hero-inner reveal"><div class="eyebrow">Cerro de las Rosas · Córdoba</div><h1>El agua como <em>medio.</em><br>El movimiento como camino.</h1><p>SHUÍ es una experiencia de movimiento, rehabilitación y bienestar en el agua. Un espacio profesional donde cada persona puede transitar su propio proceso.</p><div class="actions"><a class="btn" href="#agua">DESCUBRIR SHUÍ</a><a class="btn line" href="https://wa.me/5493518694852?text=Hola%20SHU%C3%8D%2C%20quiero%20hacer%20una%20consulta." target="_blank">QUIERO CONSULTAR</a></div><p class="hero-note">💧 Agua · movimiento · rehabilitación · bienestar</p></div></section>
 
-<section id="shui">
-  <div class="container split">
-    <div>
-      <div class="section-kicker">La idea detrás de SHUÍ</div>
-      <h2>El agua cambia la manera de moverte.</h2>
-      <p class="intro">Trabajar en el agua permite encontrar otra forma de movimiento: con menor impacto, mayor libertad y acompañamiento profesional.</p>
-      <div class="benefits">
-        <div class="benefit"><strong>MENOR IMPACTO</strong><span>Un entorno amable para moverse y ejercitar.</span></div>
-        <div class="benefit"><strong>MOVILIDAD</strong><span>Movimiento adaptado a las posibilidades de cada persona.</span></div>
-        <div class="benefit"><strong>PROGRESIÓN</strong><span>Un proceso acompañado, paso a paso.</span></div>
-      </div>
-    </div>
-    <div class="photo story-photo"><img src="assets/shui-adulto-mayor.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7222579/pexels-photo-7222579.jpeg?auto=compress&cs=tinysrgb&w=1200'" alt="Adulto y mujer mayor realizando actividad suave en una pileta interior" loading="lazy"></div>
-  </div>
-</section>
+<section class="manifesto" id="agua"><div class="wrap manifesto-grid reveal"><div><div class="kicker">01 · El agua como medio</div><h2>Hay movimientos que empiezan cuando cambia el entorno.</h2><p class="intro">El agua puede ofrecer un contexto diferente para explorar el movimiento, acompañar una recuperación y trabajar desde una mirada profesional y humana.</p><div class="quote">“No se trata solamente de entrar al agua.<br><span>Se trata de encontrar otra manera de moverte.</span>”</div></div><div class="water-card"><img src="assets/shui-adulto-mayor.jpg" alt="Persona realizando actividad acuática en SHUÍ"><div class="float-word">Así se vive SHUÍ.</div></div></div></section>
 
-<section class="blue-section" id="servicios">
-  <div class="container">
-    <div class="section-kicker">Encontrá tu camino</div>
-    <h2>¿Qué estás buscando?</h2>
-    <p class="intro">En SHUÍ el movimiento se adapta a vos, no al revés.</p>
-    <div class="needs">
-      <a class="need" href="#hidro"><span class="num">01</span><h3>Estoy recuperándome</h3><p>Lesiones · postquirúrgicos · rehabilitación.</p></a>
-      <a class="need" href="#individual"><span class="num">02</span><h3>Necesito atención individual</h3><p>Fisioterapia y sesiones personalizadas.</p></a>
-      <a class="need" href="#actividades"><span class="num">03</span><h3>Quiero entrenar</h3><p>Aquatraining · fitness acuático.</p></a>
-      <a class="need" href="#actividades"><span class="num">04</span><h3>Quiero mantenerme activo</h3><p>Adultos mayores · movimiento · bienestar.</p></a>
-    </div>
-  </div>
-  <div class="wave"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,65 C220,125 430,5 700,55 C980,110 1190,30 1440,65 L1440,120 L0,120Z"/></svg></div>
-</section>
+<section class="people" id="personas"><div class="wrap reveal"><div class="kicker">02 · Las personas</div><h2>Cada cuerpo tiene su propio proceso.</h2><p class="intro">No partimos de una persona ideal. Partimos de vos, de tu momento actual y de aquello que querés trabajar.</p><div class="needs"><article class="need"><b>01</b><h3>Quiero recuperar movimiento</h3><p>Cuando una lesión, cirugía u otra situación cambió tu forma de moverte.</p></article><article class="need"><b>02</b><h3>Necesito acompañamiento</h3><p>Cuando querés transitar un proceso con seguimiento profesional.</p></article><article class="need"><b>03</b><h3>Quiero mantenerme activo/a</h3><p>Movimiento y actividad adaptados a tus posibilidades.</p></article><article class="need"><b>04</b><h3>Quiero sentirme mejor</h3><p>Un espacio para moverte, cuidarte y construir bienestar.</p></article></div></div></section>
 
-<section id="hidro">
-  <div class="container split">
-    <div class="photo story-photo"><img src="assets/shui-ejercicio.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7222563/pexels-photo-7222563.jpeg?auto=compress&cs=tinysrgb&w=1200'" alt="Mujer mayor realizando movimiento en una pileta interior" loading="lazy"></div>
-    <div>
-      <div class="section-kicker">Servicio principal</div>
-      <h2>Hidrokinesioterapia</h2>
-      <p class="intro">Movimiento terapéutico en el agua para acompañar procesos de recuperación y rehabilitación de manera progresiva y adaptada.</p>
-      <div class="benefits">
-        <div class="benefit"><strong>MOVILIDAD</strong><span>Trabajar el movimiento en un entorno de menor impacto.</span></div>
-        <div class="benefit"><strong>FORTALECIMIENTO</strong><span>Ejercitar de acuerdo con las posibilidades de cada persona.</span></div>
-        <div class="benefit"><strong>ACOMPAÑAMIENTO</strong><span>Un proceso cuidado y personalizado.</span></div>
-      </div>
-      <div style="margin-top:26px"><button class="cta" data-book>RESERVAR CONSULTA</button></div>
-    </div>
-  </div>
-</section>
+<section class="services" id="servicios"><div class="wrap reveal"><div class="kicker">03 · La propuesta</div><h2>Profesionalidad que se siente humana.</h2><p class="intro">La propuesta se organiza alrededor del movimiento y el acompañamiento. Los servicios se presentan de forma clara, sin convertir la experiencia en un catálogo médico.</p><div class="service-grid"><article class="service"><div class="icon">〰</div><h3>Hidrokinesioterapia</h3><p>Trabajo terapéutico en el agua, adaptado a la evaluación y a los objetivos de cada persona.</p></article><article class="service"><div class="icon">↗</div><h3>Rehabilitación acuática</h3><p>Un entorno acuático para acompañar procesos de recuperación y evolución del movimiento.</p></article><article class="service"><div class="icon">◌</div><h3>Movimiento y bienestar</h3><p>Propuestas acuáticas para personas que buscan mantenerse activas y cuidar su cuerpo.</p></article><article class="service"><div class="icon">＋</div><h3>Atención individual</h3><p>Espacios de trabajo personalizados cuando el proceso requiere una mirada más específica.</p></article><article class="service"><div class="icon">≈</div><h3>Actividad acuática</h3><p>Opciones para moverse en el agua según las propuestas y disponibilidad de SHUÍ.</p></article><article class="service"><div class="icon">◎</div><h3>Orientación inicial</h3><p>Un primer contacto para escuchar qué necesitás y ayudarte a encontrar el camino adecuado.</p></article></div></div></section>
 
-<section class="pool">
-  <div class="container pool-copy">
-    <span class="pool-badge">💧 PILETA CLIMATIZADA TODO EL AÑO</span>
-    <h2>Tu espacio de movimiento.</h2>
-    <p class="lead">Una pileta pensada para acompañar diferentes formas de rehabilitación, entrenamiento y bienestar.</p>
-  </div>
-</section>
+<section class="space" id="espacio"><div class="wrap"><div class="copy reveal"><span class="pill">04 · EL ESPACIO</span><h2>La pileta también es parte de la experiencia.</h2><p>Agua, temperatura, profundidad, elementos y entorno construyen un escenario diferente para trabajar el movimiento.</p><a class="btn alt" href="#contacto">CONOCER SHUÍ</a></div></div></section>
 
-<section class="services" id="actividades">
-  <div class="container">
-    <div class="section-kicker">Todas las formas de SHUÍ</div>
-    <h2>Rehabilitación, movimiento y bienestar.</h2>
-    <p class="intro">Propuestas para recuperar movimiento, ganar confianza y seguir activo, siempre con acompañamiento profesional.</p>
-    <div class="service-grid">
-      <article class="service"><div class="service-img"><img src="https://images.pexels.com/photos/7222570/pexels-photo-7222570.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Personas mayores en pileta interior" loading="lazy"></div><div class="service-body"><h3>Rehabilitación acuática</h3><p>Para acompañar procesos de recuperación, movilidad y confianza en el movimiento.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.pexels.com/photos/8028657/pexels-photo-8028657.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Adultos realizando ejercicios de equilibrio en el agua" loading="lazy"></div><div class="service-body"><h3>Aquatraining</h3><p>Entrenamiento en el agua para trabajar fuerza, movilidad y resistencia.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.pexels.com/photos/7222174/pexels-photo-7222174.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Mujer mayor entrando a una pileta interior" loading="lazy"></div><div class="service-body"><h3>Fitness acuático</h3><p>Actividad física adaptada para mantenerte activo y disfrutar del movimiento.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.pexels.com/photos/7222178/pexels-photo-7222178.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Adulto y mujer mayor realizando actividad acuática" loading="lazy"></div><div class="service-body"><h3>Adultos y adultos mayores</h3><p>Movimiento adaptado para acompañar movilidad, equilibrio, fuerza y autonomía.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.pexels.com/photos/7222179/pexels-photo-7222179.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Mujer mayor relajándose en una pileta interior" loading="lazy"></div><div class="service-body"><h3>Terapias acuáticas</h3><p>Trabajo acuático adaptado a objetivos de movilidad, recuperación y bienestar.</p></div></article>
-      <article class="service"><div class="service-img"><img src="https://images.pexels.com/photos/7222182/pexels-photo-7222182.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Adultos mayores compartiendo una actividad en el agua" loading="lazy"></div><div class="service-body"><h3>Watsu · Terapias especiales</h3><p>Experiencias acuáticas suaves orientadas a relajación, bienestar y contacto corporal.</p></div></article>
-    </div></div>
-  </div>
-</section>
+<section class="real"><div class="wrap reveal"><div class="kicker">05 · Así se vive SHUÍ</div><h2>Personas reales. Movimiento real.</h2><p class="intro">Las imágenes de esta sección deben mostrar la experiencia auténtica de SHUÍ: su pileta, sus personas, sus elementos y su manera de trabajar.</p><div class="real-grid"><div class="real-main"><img src="assets/shui-adulto-mayor.jpg" alt="Actividad acuática real de SHUÍ"></div><div class="real-side"><div class="mini pending"><div><strong>Más historias reales</strong><span>Este espacio queda preparado para incorporar las fotografías originales de SHUÍ.</span></div></div><div class="mini pending"><div><strong>Experiencias</strong><span>Testimonios y momentos reales, siempre con autorización.</span></div></div></div></div></div></section>
 
-<section class="personal" id="individual">
-  <div class="container">
-    <div class="section-kicker">Atención personalizada</div>
-    <h2>Una propuesta más individual para vos.</h2>
-    <div class="individual">
-      <div class="individual-card accent">
-        <h3>Sesiones individuales en pileta</h3>
-        <p>Un espacio de trabajo personalizado para acompañar objetivos específicos dentro del agua.</p>
-        <div class="steps"><div class="step"><b>01</b>Conocemos tu objetivo.</div><div class="step"><b>02</b>Trabajamos de forma adaptada.</div><div class="step"><b>03</b>Acompañamos tu evolución.</div></div>
-        <div style="margin-top:24px"><button class="cta" data-book>RESERVAR SESIÓN</button></div>
-      </div>
-      <div class="individual-card">
-        <h3>Fisioterapia individual</h3>
-        <p>Sesiones personalizadas de fisioterapia, con una mirada profesional y cercana.</p>
-        <p><strong>Próximamente:</strong> presentación ampliada de la profesional, especialidades, enfoque y agenda.</p>
-        <button class="cta" data-book>CONSULTAR</button>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="process" id="proceso"><div class="wrap reveal"><div class="kicker">06 · El proceso</div><h2>Primero te escuchamos.</h2><p class="intro">La web no debería diagnosticarte. Debería ayudarte a dar el primer paso hacia una conversación profesional.</p><div class="steps"><article class="step"><span>01 · CONOCERNOS</span><h3>Contanos qué estás buscando.</h3><p>Tu motivo de consulta, tus objetivos y el momento en el que estás.</p></article><article class="step"><span>02 · EVALUAR</span><h3>Entender tu situación.</h3><p>La evaluación profesional permite definir qué propuesta corresponde.</p></article><article class="step"><span>03 · ACOMPAÑAR</span><h3>Construir el proceso.</h3><p>El trabajo se adapta a la evolución y a las posibilidades de cada persona.</p></article><article class="step"><span>04 · AVANZAR</span><h3>Registrar cada movimiento.</h3><p>Porque recuperar confianza también forma parte del proceso.</p></article></div></div></section>
 
-
-<section class="assessment" id="evaluacion">
-  <div class="container">
-    <div class="section-kicker">Orientación inicial</div>
-    <h2>¿Qué necesita hoy tu cuerpo?</h2>
-    <p class="intro">Un test breve para ordenar lo que sentís y ayudarte a conversar con el profesional sobre qué tipo de abordaje podría ser adecuado. <strong>No diagnostica ni reemplaza una evaluación clínica o kinésica.</strong></p>
-    <div class="assessment-layout">
-      <form class="assessment-card" id="assessmentForm">
-        <div class="assessment-progress"><span id="assessmentProgress">0 / 8 respondidas</span><span>sin guardar datos</span></div>
-        <div class="question"><label>1. ¿Cuál es tu principal objetivo?</label><select name="goal" required><option value="">Elegí una opción…</option><option value="dolor">Disminuir dolor o molestias</option><option value="rehab">Recuperarme de una lesión o cirugía</option><option value="movilidad">Mejorar movilidad o rigidez</option><option value="balance">Trabajar equilibrio o seguridad al moverme</option><option value="fitness">Mantenerme activo/a y fortalecerme</option><option value="bienestar">Relajarme y mejorar mi bienestar</option></select></div>
-        <div class="question"><label>2. ¿Dónde sentís principalmente la molestia o limitación?</label><select name="zone" required><option value="">Elegí una opción…</option><option value="columna">Columna, cuello o espalda</option><option value="miembro">Hombro, brazo, cadera, rodilla o tobillo</option><option value="general">En varias zonas o de forma general</option><option value="neuro">Sensación de debilidad, coordinación o control del movimiento</option><option value="none">No tengo una molestia concreta</option></select></div>
-        <div class="question"><label>3. ¿Desde cuándo te ocurre?</label><select name="duration" required><option value="">Elegí una opción…</option><option value="recent">Hace pocos días</option><option value="weeks">Hace varias semanas</option><option value="months">Hace meses</option><option value="long">Es algo recurrente o de larga evolución</option><option value="none">No aplica</option></select></div>
-        <div class="question"><label>4. ¿Cuánto limita hoy tus actividades habituales?</label><select name="impact" required><option value="">Elegí una opción…</option><option value="none">Nada</option><option value="mild">Un poco</option><option value="moderate">Bastante</option><option value="high">Mucho: me cuesta tareas cotidianas</option></select></div>
-        <div class="question"><label>5. ¿Tuviste una lesión, cirugía o inmovilización reciente?</label><select name="injury" required><option value="">Elegí una opción…</option><option value="yes">Sí</option><option value="no">No</option><option value="unsure">No estoy seguro/a</option></select></div>
-        <div class="question"><label>6. ¿Te preocupa el equilibrio, las caídas o sentirte inseguro/a al caminar?</label><select name="balance" required><option value="">Elegí una opción…</option><option value="yes">Sí</option><option value="sometimes">A veces</option><option value="no">No</option></select></div>
-        <div class="question"><label>7. ¿Qué te gustaría conseguir con el movimiento en el agua?</label><select name="activity" required><option value="">Elegí una opción…</option><option value="strength">Más fuerza y resistencia</option><option value="mobility">Más movilidad y confianza</option><option value="pain">Moverme con menos dolor o impacto</option><option value="social">Actividad y bienestar compartido</option><option value="rehab">Acompañar una recuperación</option></select></div>
-        <div class="question"><label>8. Antes de comenzar, ¿hay algo importante que el profesional deba conocer?</label><select name="alert" required><option value="">Elegí una opción…</option><option value="no">No que yo sepa</option><option value="medical">Tengo una condición médica que requiere indicaciones</option><option value="infection">Tengo una infección, herida abierta o problema de piel activo</option><option value="cardio">Tengo síntomas cardiorrespiratorios importantes o episodios de desmayo</option><option value="acute">Tengo un dolor muy intenso o un problema agudo que aún no fue evaluado</option></select></div>
-        <button class="cta" type="submit">VER MI ORIENTACIÓN</button>
-        <small class="assessment-note">Tus respuestas se procesan en este dispositivo para mostrar una orientación inicial. No se envían ni almacenan automáticamente.</small>
-      </form>
-      <div class="assessment-result" id="assessmentResult">
-        <div class="result-empty"><span>SHUÍ</span><strong>Primero completá el test.</strong><p>Después te mostraremos qué área conviene conversar con el profesional y qué objetivo podría ser prioritario.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="agenda" id="agenda">
-  <div class="container split">
-    <div>
-      <div class="section-kicker">Agenda de turnos</div>
-      <h2>Elegí tu día para fisioterapia.</h2>
-      <p class="intro">Seleccioná una fecha y un horario de preferencia. La solicitud se envía por WhatsApp y el equipo de SHUÍ confirma la disponibilidad antes de reservar.</p>
-      <div class="agenda-points">
-        <div><b>01 · Fecha</b><span>Elegí el día que te resulte más cómodo.</span></div>
-        <div><b>02 · Horario</b><span>Indicá tu franja preferida.</span></div>
-        <div><b>03 · Confirmación</b><span>Recibís la respuesta por WhatsApp.</span></div>
-      </div>
-    </div>
-    <div class="calendar-card">
-      <div class="calendar-head"><div><span>TURNOS</span><strong>Fisioterapia individual</strong></div><span class="calendar-dot">●</span></div>
-      <label for="agendaDate">FECHA PREFERIDA</label>
-      <input id="agendaDate" type="date">
-      <div class="time-label">HORARIO PREFERIDO</div>
-      <div class="time-grid">
-        <button type="button" data-time="09:00">09:00</button><button type="button" data-time="10:00">10:00</button>
-        <button type="button" data-time="11:00">11:00</button><button type="button" data-time="12:00">12:00</button>
-        <button type="button" data-time="15:00">15:00</button><button type="button" data-time="16:00">16:00</button>
-        <button type="button" data-time="17:00">17:00</button><button type="button" data-time="18:00">18:00</button>
-      </div>
-      <button class="cta" id="agendaBook" type="button">SOLICITAR ESTE TURNO</button>
-      <small>Los horarios son orientativos y quedan sujetos a disponibilidad y confirmación.</small>
-    </div>
-  </div>
-</section>
-
-<section id="resenas" class="reviews">
-  <div class="container review-wrap">
-    <div>
-      <div class="section-kicker">Comunidad SHUÍ</div>
-      <h2>Lo que dicen quienes ya pasaron por SHUÍ.</h2>
-      <div class="rating">5,0</div><div class="stars">★★★★★</div><div class="review-count">6 reseñas en Google · dato visible al momento de crear esta versión</div>
-      <div class="review-actions"><a class="cta" href="https://www.google.com/maps/search/?api=1&query=Shui%20Hidrokinesioterapia&query_place_id=ChIJGSp3l82ZMpQRj4inBDXq9o0" target="_blank" rel="noopener">⭐ VER RESEÑAS EN GOOGLE</a><a class="cta outline" href="https://search.google.com/local/writereview?placeid=ChIJGSp3l82ZMpQRj4inBDXq9o0" target="_blank" rel="noopener">✍️ DEJAR UNA RESEÑA</a></div>
-    </div>
-    <div class="review-list">
-      <article class="review"><div class="stars">★★★★★</div><p>Las reseñas reales de la comunidad aparecerán aquí.</p><small>Google · contenido dinámico pendiente de conexión</small></article>
-      <article class="review"><div class="stars">★★★★★</div><p>Este bloque está preparado para mostrar experiencias verificables sin inventar testimonios.</p><small>Google · contenido dinámico pendiente de conexión</small></article>
-    </div>
-  </div>
-</section>
-
-<section class="location" id="ubicacion">
-  <div class="container split">
-    <div class="map-card"><iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=Shui%20Hidrokinesioterapia%2C%20Av.%20Fernando%20Fader%203853%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed"></iframe></div>
-    <div class="location-info">
-      <div class="section-kicker">Encontranos en Córdoba</div><h2>Estamos cerca.</h2>
-      <div class="info-row"><span>📍</span><div><b>Av. Fernando Fader 3853</b><span>X5000 Córdoba · Argentina</span></div></div>
-      <div class="info-row"><span>💬</span><div><b>WhatsApp</b><span>+54 9 351 869-4852</span></div></div>
-      <div class="info-row"><span>📸</span><div><b>Instagram</b><span>@shui.argentina</span></div></div>
-      <div style="margin-top:22px"><a class="cta" href="https://maps.app.goo.gl/ReKKz96Hf3jwEZWQA?g_st=ic" target="_blank" rel="noopener">CÓMO LLEGAR →</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="final">
-  <div class="container">
-    <div class="eyebrow" style="justify-content:center">Tu próximo movimiento</div>
-    <h2>Puede empezar acá.</h2>
-    <p>Consultanos y encontrá la propuesta de SHUÍ que mejor se adapta a vos.</p>
-    <div style="margin-top:28px"><button class="cta" data-book>RESERVAR TURNO</button></div>
-  </div>
-</section>
-
-<section class="real-life" id="asi-se-vive">
-  <div class="container">
-    <div class="section-kicker">SHUÍ, en la vida real</div>
-    <h2>Así se vive SHUÍ.</h2>
-    <p class="intro">Movimiento, acompañamiento y personas reales. La pileta de SHUÍ es parte de la experiencia, no una foto de catálogo.</p>
-    <div class="real-grid">
-      <div class="real-photo real-photo-tall"><img src="assets/shui-ejercicio.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7222570/pexels-photo-7222570.jpeg?auto=compress&cs=tinysrgb&w=1200'" alt="Persona realizando ejercicios en la pileta climatizada de SHUÍ" loading="lazy"></div>
-      <div class="real-photo"><img src="assets/shui-grupo.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7222179/pexels-photo-7222179.jpeg?auto=compress&cs=tinysrgb&w=1200'" alt="Personas realizando actividad acuática en SHUÍ" loading="lazy"></div>
-      <div class="real-photo"><img src="assets/shui-adulto-mayor.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7222182/pexels-photo-7222182.jpeg?auto=compress&cs=tinysrgb&w=1200'" alt="Actividad acuática para adultos mayores en SHUÍ" loading="lazy"></div>
-    </div>
-  </div>
-</section>
+<section class="contact" id="contacto"><div class="wrap"><div class="contact-box reveal"><div><div class="kicker" style="color:#8ee9f4">07 · Hablemos</div><h2>Tu próximo movimiento puede empezar acá.</h2><p class="intro">Si querés conocer SHUÍ, consultar por una propuesta o preguntar por disponibilidad, estamos para escucharte.</p></div><div class="contact-actions"><a class="btn" href="https://wa.me/5493518694852?text=Hola%20SHU%C3%8D%2C%20quiero%20hacer%20una%20consulta." target="_blank">WHATSAPP →</a><a class="btn line" href="https://www.instagram.com/shui.argentina/" target="_blank">INSTAGRAM</a></div></div></div></section>
 </main>
-
-
-<section class="legal" id="legales">
-  <div class="container">
-    <div class="section-kicker">Información legal</div>
-    <h2>Transparencia y cuidado.</h2>
-    <div class="legal-grid">
-      <details open><summary>Privacidad y datos personales</summary><p>Los datos que envíes mediante el formulario o WhatsApp se utilizan para responder consultas y gestionar solicitudes de turnos. SHUÍ debe resguardar la confidencialidad y tratar los datos personales de acuerdo con la normativa aplicable.</p></details>
-      <details><summary>Información de salud</summary><p>El contenido de este sitio es informativo y no reemplaza una evaluación profesional. La indicación, adaptación y continuidad de cualquier práctica se define de acuerdo con la evaluación correspondiente.</p></details>
-      <details><summary>Turnos y cancelaciones</summary><p>Completar el calendario o enviar una solicitud no implica una reserva automática. El turno queda confirmado únicamente cuando SHUÍ comunica la disponibilidad. Las condiciones de cancelación y reprogramación se informarán al momento de confirmar.</p></details>
-      <details><summary>Derechos del paciente</summary><p>La atención se brinda respetando la dignidad, intimidad, confidencialidad, información sanitaria y consentimiento informado que correspondan.</p></details>
-    </div>
-    <p class="legal-note">© <span class="legal-year"></span> SHUÍ Hidrokinesioterapia · Todos los derechos reservados.</p>
-  </div>
-</section>
-
-<footer>
-  <div class="container footer-grid">
-    <div><div class="brand"><span class="brand-logo"><img src="assets/logo-shui.svg" alt="SHUÍ"></span><span class="brand-text">HIDROKINESIOTERAPIA</span></div><p>Hidrokinesioterapia · Rehabilitación · Movimiento · Bienestar</p></div>
-    <div><strong>Explorá</strong><div class="footer-links" style="margin-top:12px"><a href="#servicios">Servicios</a><a href="#individual">Atención individual</a><a href="#resenas">Reseñas</a><a href="#ubicacion">Contacto</a></div></div>
-    <div><strong>Contacto</strong><p style="margin:8px 0 10px;color:rgba(255,255,255,.68);font-size:.85rem">Cerro de las Rosas · Córdoba<br>Av. Fernando Fader 3853</p><div class="footer-links"><a href="https://wa.me/5493518694852">WhatsApp</a><a href="https://www.instagram.com/shui.argentina/" target="_blank" rel="noopener">@shui.argentina</a><a href="https://www.google.com/maps/search/?api=1&query=Shui%20Hidrokinesioterapia&query_place_id=ChIJGSp3l82ZMpQRj4inBDXq9o0" target="_blank" rel="noopener">Cómo llegar</a></div></div>
-  </div>
-  <div class="container copyright">© <span id="year"></span> SHUÍ Hidrokinesioterapia. Todos los derechos reservados.</div>
-</footer>
-
-<a class="float-wa" href="https://wa.me/5493518694852?text=Hola%20SHU%C3%8D%2C%20quiero%20consultar%20por%20las%20actividades%20y%20turnos%20disponibles." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
-
-<div class="modal" id="bookingModal" aria-hidden="true">
-  <div class="modal-box">
-    <button class="close" id="closeModal" aria-label="Cerrar">×</button>
-    <div class="section-kicker">Reserva</div>
-    <h2 style="font-size:2.2rem">Elegí cómo querés atenderte.</h2>
-    <p class="intro">Elegí el servicio, el día y el horario de preferencia. La solicitud se envía por WhatsApp y SHUÍ confirma la disponibilidad antes de reservar.</p>
-    <form class="form" id="bookingForm">
-      <div class="field"><label for="service">SERVICIO</label><select id="service" required><option value="">Seleccionar…</option><option>Hidrokinesioterapia</option><option>Sesión individual en pileta</option><option>Fisioterapia individual</option><option>Aquatraining</option><option>Fitness acuático</option><option>Adultos mayores</option><option>Watsu / terapia acuática</option></select></div>
-      <div class="field"><label for="date">DÍA PREFERIDO</label><input id="date" type="date" required></div>
-      <div class="field"><label for="time">HORARIO PREFERIDO</label><input id="time" type="time" required></div>
-      <div class="field"><label for="name">NOMBRE</label><input id="name" type="text" placeholder="Tu nombre" required></div>
-      <div class="field"><label for="phone">TELÉFONO</label><input id="phone" type="tel" placeholder="351..." required></div>
-      <button class="cta" type="submit">ENVIAR SOLICITUD POR WHATSAPP</button>
-      <div class="form-note">La solicitud no confirma automáticamente un turno: SHUÍ deberá validar disponibilidad.</div>
-    </form>
-  </div>
-</div>
-
+<footer><div class="wrap footer"><div><img src="assets/logo-shui.svg" alt="SHUÍ"><p>Agua · movimiento · rehabilitación · bienestar</p></div><div><p>Cerro de las Rosas · Córdoba</p><p>Av. Fernando Fader 3853</p><p>+54 9 351 869-4852</p></div></div></footer>
+<a class="wa" href="https://wa.me/5493518694852?text=Hola%20SHU%C3%8D%2C%20quiero%20hacer%20una%20consulta." target="_blank" aria-label="WhatsApp">💬</a>
 <script>
-  const assessmentForm=document.getElementById('assessmentForm');
-  const assessmentResult=document.getElementById('assessmentResult');
-  if(assessmentForm){
-    const progress=document.getElementById('assessmentProgress');
-    assessmentForm.addEventListener('change',()=>{
-      const answered=[...assessmentForm.querySelectorAll('select')].filter(s=>s.value).length;
-      progress.textContent=answered+' / 8 respondidas';
-    });
-    assessmentForm.addEventListener('submit',e=>{
-      e.preventDefault();
-      const d=new FormData(assessmentForm);
-      const scores={dolor:0,rehab:0,movilidad:0,balance:0,fitness:0,bienestar:0};
-      const add=(k,n=1)=>{if(scores[k]!==undefined)scores[k]+=n};
-      const goal=d.get('goal'); if(goal)add(goal,3);
-      const zone=d.get('zone'); if(zone==='columna'||zone==='miembro')add('dolor',2); if(zone==='general')add('movilidad',2); if(zone==='neuro')add('balance',2);
-      const duration=d.get('duration'); if(duration==='weeks')add('rehab',1); if(duration==='months'||duration==='long')add('dolor',2);
-      const impact=d.get('impact'); if(impact==='moderate')add('movilidad',2); if(impact==='high')add('rehab',2);
-      if(d.get('injury')==='yes')add('rehab',3); if(d.get('injury')==='unsure')add('rehab',1);
-      if(d.get('balance')==='yes')add('balance',3); if(d.get('balance')==='sometimes')add('balance',2);
-      const activity=d.get('activity'); if(activity==='strength')add('fitness',3); if(activity==='mobility')add('movilidad',3); if(activity==='pain')add('dolor',3); if(activity==='social')add('bienestar',3); if(activity==='rehab')add('rehab',3);
-      const alert=d.get('alert');
-      const names={dolor:'Dolor y movimiento',rehab:'Recuperación y rehabilitación',movilidad:'Movilidad y función',balance:'Equilibrio y seguridad',fitness:'Actividad y acondicionamiento',bienestar:'Bienestar y movimiento suave'};
-      const desc={dolor:'Tus respuestas sugieren que el dolor o las molestias pueden ser un objetivo central para trabajar. La evaluación profesional ayudará a determinar qué movimientos, cargas y recursos acuáticos son apropiados.',rehab:'Tus respuestas ponen el foco en una recuperación. Conviene que el profesional conozca antecedentes, cirugía o lesión y la indicación médica/kinésica disponible antes de definir el trabajo en el agua.',movilidad:'El eje parece estar en recuperar o conservar movilidad y función. El agua puede ser un entorno útil para explorar movimiento con menor carga, siempre adaptado a tu evaluación.',balance:'El equilibrio y la seguridad al moverte aparecen como prioridad. Es importante valorar marcha, fuerza, estabilidad y antecedentes de caídas antes de elegir ejercicios.',fitness:'Tu objetivo se orienta a mantenerte activo/a, mejorar fuerza y resistencia y sostener una rutina. La propuesta debería ajustarse a tu edad, condición y nivel actual.',bienestar:'Buscás una experiencia de movimiento suave y bienestar. El profesional puede orientarte sobre qué actividad acuática se adapta mejor a tus objetivos y condiciones.'};
-      const best=Object.keys(scores).sort((a,b)=>scores[b]-scores[a])[0];
-      const red=alert!=='no';
-      let html='<div class="result-kicker">Orientación inicial</div><div class="result-title">'+names[best]+'</div><p class="result-text">'+desc[best]+'</p><div class="result-list"><div><strong>Próximo paso:</strong> conversar con un profesional para confirmar objetivos, indicaciones y progresión.</div><div><strong>Importante:</strong> este resultado orienta; no es un diagnóstico ni indica por sí solo un tratamiento.</div></div>';
-      if(red) html+='<div class="result-alert"><strong>Antes de iniciar:</strong> por la respuesta que marcaste, conviene consultar con un profesional de salud y confirmar que la actividad acuática sea adecuada para vos.</div>';
-      html+='<div class="result-actions"><button class="cta" type="button" id="assessmentBook">QUIERO UNA EVALUACIÓN</button></div>';
-      assessmentResult.innerHTML=html;
-      document.getElementById('assessmentBook').addEventListener('click',()=>{const msg='Hola SHUÍ, hice la orientación inicial de la web y quisiera consultar por una evaluación profesional.';window.open('https://wa.me/5493518694852?text='+encodeURIComponent(msg),'_blank')});
-      assessmentResult.scrollIntoView({behavior:'smooth',block:'nearest'});
-    });
-  }
-
-  const topbar=document.getElementById('topbar');
-  window.addEventListener('scroll',()=>topbar.classList.toggle('scrolled',scrollY>20));
-  document.getElementById('year').textContent=new Date().getFullYear();
-  const modal=document.getElementById('bookingModal');
-  const openModal=()=>{modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};
-  const closeModal=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''};
-  document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',openModal));
-  document.getElementById('closeModal').addEventListener('click',closeModal);
-  modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
-  document.getElementById('bookingForm').addEventListener('submit',e=>{
-    e.preventDefault();
-    const service=document.getElementById('service').value,date=document.getElementById('date').value,time=document.getElementById('time').value,name=document.getElementById('name').value,phone=document.getElementById('phone').value;
-    const msg=`Hola SHUÍ, quiero solicitar un turno.%0A%0AServicio: ${service}%0ADía preferido: ${date}%0AHorario preferido: ${time}%0ANombre: ${name}%0ATeléfono: ${phone}`;
-    window.open('https://wa.me/5493518694852?text='+msg,'_blank');
-  });
-  document.getElementById('menuBtn').addEventListener('click',()=>{
-    const nav=document.querySelector('.links');
-    nav.style.display=nav.style.display==='flex'?'none':'flex';
-    nav.style.position='absolute';nav.style.top='70px';nav.style.left='14px';nav.style.right='14px';nav.style.padding='18px';nav.style.borderRadius='18px';nav.style.background='#fff';nav.style.boxShadow='0 15px 40px rgba(0,0,0,.12)';nav.style.flexDirection='column';nav.style.alignItems='flex-start';
-  });
-
-  const agendaDate=document.getElementById('agendaDate');
-  if(agendaDate){
-    const today=new Date(); const iso=today.toISOString().slice(0,10); agendaDate.min=iso; agendaDate.value=iso;
-    let selectedTime='';
-    document.querySelectorAll('.time-grid button').forEach(btn=>btn.addEventListener('click',()=>{
-      document.querySelectorAll('.time-grid button').forEach(b=>b.classList.remove('selected'));
-      btn.classList.add('selected'); selectedTime=btn.dataset.time;
-    }));
-    document.getElementById('agendaBook').addEventListener('click',()=>{
-      const date=agendaDate.value || iso;
-      const time=selectedTime || 'Horario a coordinar';
-      const msg=`Hola SHUÍ, quiero solicitar un turno de fisioterapia individual.%0A%0AFecha preferida: ${date}%0AHorario preferido: ${time}%0AQuisiera consultar disponibilidad.`;
-      window.open('https://wa.me/5493518694852?text='+msg,'_blank');
-    });
-  }
-  document.querySelector('.legal-year').textContent=new Date().getFullYear();
-
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+document.getElementById('menu').addEventListener('click',()=>{const n=document.querySelector('.navlinks');n.style.display=n.style.display==='flex'?'none':'flex';n.style.position='absolute';n.style.top='76px';n.style.left='14px';n.style.right='14px';n.style.padding='20px';n.style.background='#fff';n.style.borderRadius='20px';n.style.flexDirection='column';n.style.boxShadow='0 18px 45px rgba(0,0,0,.12)'});
 </script>
-</body>
-</html>
+</body></html>
